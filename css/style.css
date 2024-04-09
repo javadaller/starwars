@@ -1,0 +1,164 @@
+/*
+  1. Use a more-intuitive box-sizing model.
+*/
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+/*
+  2. Remove default margin
+*/
+* {
+  margin: 0;
+}
+
+/*
+  3. Allow percentage-based heights in the application
+*/
+html, body {
+  height: 100%;
+}
+
+/*
+  Typographic tweaks!
+  4. Add accessible line-height
+  5. Improve text rendering
+*/
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+
+/*
+  6. Improve media defaults
+*/
+img, picture, video, canvas, svg {
+  display: block;
+  max-width: 100%;
+}
+
+/*
+  7. Remove built-in form typography styles
+*/
+input, button, textarea, select {
+  font: inherit;
+}
+
+/*
+  8. Avoid text overflows
+*/
+p, h1, h2, h3, h4, h5, h6 {
+  overflow-wrap: break-word;
+}
+
+/*
+  9. Create a root stacking context
+*/
+#root, #__next {
+  isolation: isolate;
+}
+
+#intro {
+  animation: fadeOut 1s linear 3s forwards;
+}
+
+@keyframes fadeOut {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+#logo img {
+  opacity: 0;
+  animation: zoomOut 3s linear 4s forwards;
+}
+
+@keyframes zoomOut {
+  0% {
+    opacity: 0;
+    transform: scale(3000%);
+  }
+  10% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 1;
+    transform: scale(0%);
+  }
+}
+#story {
+  opacity: 0;
+  transform: perspective(300px) rotateX(30deg);
+  transform-origin: center bottom;
+  animation: story 15s linear 6.5s forwards;
+}
+
+@keyframes story {
+  0% {
+    transform: translateX(400px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(-400px);
+    opacity: 1;
+  }
+}
+#stars {
+  opacity: 0;
+  animation: stars 2s linear 4s forwards;
+}
+
+@keyframes stars {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+body {
+  background-color: black;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  perspective: 500px;
+  overflow: hidden;
+}
+
+.stars {
+  background-image: url("../assets/images/stars.jpg");
+  background-color: black;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+#intro {
+  color: blue;
+  font-size: 3em;
+}
+
+.center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+#story {
+  color: yellow;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 25%;
+}
+
+#stars {
+  width: 100%;
+  height: 100%;
+  filter: contrast(150%);
+}/*# sourceMappingURL=style.css.map */

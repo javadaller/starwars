@@ -1,0 +1,65 @@
+#intro {
+    animation: fadeOut 1s linear 3s forwards;
+}
+@keyframes fadeOut {
+    0% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+#logo {
+    img {
+        opacity:0;
+        animation: zoomOut 3s linear 4s forwards;
+    }
+}
+@keyframes zoomOut {
+    0% {
+        opacity: 0;
+        transform: scale(3000%);
+    }
+
+    10% {
+        opacity:1;
+    }
+
+    100% {
+        opacity: 1;
+        transform: scale(0%);
+    }
+}
+
+#story {
+    opacity:0;
+    transform:perspective(300px) rotateX(30deg);
+    transform-origin: center bottom;
+    animation: story 15s linear 6.5s forwards;
+}
+@keyframes story {
+    0% {
+        transform: translateX(400px);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateX(-400px);
+        opacity:1;
+    }
+}
+
+#stars {
+    opacity:0;
+    animation: stars 2s linear 4s forwards;
+}
+@keyframes stars {
+    0% {
+        opacity:0;
+    }
+
+    100% {
+        opacity:1;
+    }
+}
