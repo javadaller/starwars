@@ -8,7 +8,7 @@ muzikSound.preload = 'auto';
 muzikSound.load();
 
 async function muzik() {
-    await sleep(3500);
+    await sleep(3700);
     const sound=muzikSound.cloneNode();
     sound.play();
 }
