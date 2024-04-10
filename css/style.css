@@ -90,18 +90,17 @@ p, h1, h2, h3, h4, h5, h6 {
 }
 #story {
   opacity: 0;
-  transform: perspective(300px) rotateX(30deg);
   transform-origin: center bottom;
-  animation: story 15s linear 6.5s forwards;
+  animation: story 30s linear 6.5s forwards;
 }
 
 @keyframes story {
   0% {
-    transform: translateX(400px);
-    opacity: 0;
+    transform: perspective(400px) rotateX(40deg) translateY(600px);
+    opacity: 1;
   }
   100% {
-    transform: translateX(-400px);
+    transform: perspective(300px) rotateX(40deg) translateY(-400px);
     opacity: 1;
   }
 }
@@ -126,6 +125,13 @@ body {
   align-items: center;
   perspective: 500px;
   overflow: hidden;
+}
+
+main {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .stars {
@@ -154,10 +160,11 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  width: 25%;
+  width: 45%;
 }
 
 #stars {
+  z-index: -1;
   width: 100%;
   height: 100%;
   filter: contrast(150%);
