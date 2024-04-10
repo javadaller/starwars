@@ -3,12 +3,13 @@ function sleep(ms) {
     return new Promise(resolve => setTimeout(resolve, ms));
 }
 
-/// START //////////////
+const muzikSound=new Audio('../assets/sounds/starwars.mp3');
+muzikSound.preload = 'auto';
+muzikSound.load();
 
-// async function start() {
-//     await sleep(2000);
-//     document.querySelector('#intro').classList.add('fadeOut');
-//     await sleep(1000);
-// }
-
-// start();
+async function muzik() {
+    await sleep(3500);
+    const sound=muzikSound.cloneNode();
+    sound.play();
+}
+muzik();
