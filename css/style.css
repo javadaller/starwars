@@ -96,11 +96,11 @@ p, h1, h2, h3, h4, h5, h6 {
 
 @keyframes story {
   0% {
-    transform: perspective(400px) rotateX(30deg) translateY(680px) scale(150%);
+    transform: perspective(400px) rotateX(30deg) translateY(680px) scale(250%);
     opacity: 1;
   }
   100% {
-    transform: perspective(300px) rotateX(30deg) translateY(-2000px) scale(150%);
+    transform: perspective(300px) rotateX(30deg) translateY(-2000px) scale(250%);
     opacity: 1;
   }
 }
@@ -160,11 +160,7 @@ main {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  width: 80%;
-}
-
-#strory > p {
-  font-size: 3vw;
+  width: 60%;
 }
 
 #stars {
